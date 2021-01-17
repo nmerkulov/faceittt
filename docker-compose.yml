@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: user
+    ports:
+      - 5432:5432
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      PG_CONNSTRING: postgres://postgres:secret@postgres:5432/user?sslmode=disable

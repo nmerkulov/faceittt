@@ -1,0 +1,62 @@
+GET 127.0.0.1:3000/users
+Accept: application/json
+
+###
+GET 127.0.0.1:3000/users/1
+Accept: application/json
+
+###
+POST 127.0.0.1:3000/users
+Content-Type: application/json
+
+{
+  "email": "emai@google.com",
+  "nickname": "nick",
+  "name": "john",
+  "last_name": "wick",
+  "password": "123"
+}
+
+###
+
+POST 127.0.0.1:3000/users
+Content-Type: application/json
+
+{
+  "email": "emai2@google.com",
+  "nickname": "goodguy",
+  "name": "smuel",
+  "last_name": "clark",
+  "password": "IDDQD"
+}
+
+###
+
+PUT 127.0.0.1:3000/users/1
+Content-Type: application/json
+
+{
+  "name": "smuel",
+  "last_name": "clark",
+  "country": "norway"
+}
+
+###
+POST 127.0.0.1:3000/users
+Content-Type: application/json
+
+{
+  "email": "badguy@google.com",
+  "nickname": "badguy",
+  "name": "bad",
+  "last_name": "guy",
+  "password": "IDDQD"
+}
+
+###
+GET 127.0.0.1:3000/users?country=norway
+Accept: application/json
+
+
+###
+DELETE 127.0.0.1:3000/users/9
