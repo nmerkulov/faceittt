@@ -1,11 +1,10 @@
 Instructions:
 
- To run everythin in docker-compose use `docker-compose up -d`
+ To run everything in docker-compose use `docker-compose up -d`
  Maybe you will need to run this twice, since i added no wait-scripts (i run everything locally)
- Alternavely you can build cod and run
+ Alternavely you can build code and run on host
+
  To run app first run postgres using `docker-compose  up -d postgres`, then `go run main.go`
- 
-  
  
  Migrations are built in, but usually i use something like migrate/migrate to have migrations versioned and executed as 12FA recommends
  
