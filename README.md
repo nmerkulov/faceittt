@@ -17,7 +17,7 @@ mysterious library, quite straitforward from main) so each layer/handler/usecase
 4) Please pay attention to "eventHandler" funcs at application layer. This is  sort-of hooks for handling events. Lets say - it can be very specific
 logging or it can be kafka/rabbit/nats emitting. So by that mechanics we can plug in new notificators  as we want.
 5) API build sort-of REST api. Few things to mention:
-    * Some properties are immytable - password, email nickname and ID. Thats just my assumption for application logic
+    * Some properties are immutable - password, email nickname and ID. Thats just my assumption for application logic
     * Editing API stands on a PUT method, which idiomatically often used as "update evertything according to request" 
     (or "create or update" in some cases. not ours). To explain it i'll provide opposite example - JSON-PATCH or RFC6902. So, in 
     our API, if some field is not presented in payload - this field will be flushed in the database as well. Usually i prefer to use
